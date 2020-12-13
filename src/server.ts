@@ -5,9 +5,7 @@ import routes from './routes'
 const app = express()
 
 app.use(bodyParser.json())
-app.use('/api', routes)
+app.use('/api/v1', routes)
 
-app.get('/', (request, response) => response.status(200).json({ message: 'ok' })
-)
-
-app.listen(3333, () => console.log('app running on port 3333'))
+const PORT = 3334
+app.listen(PORT, () => console.log('Nix service running on port ' + PORT))
