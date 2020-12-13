@@ -4,7 +4,7 @@ export default class LaunchesService {
   static async getAllLaunches () {
     try {
       const { data } = await axios.get(
-        'https://api.spacexdata.com/v4/launches/latest'
+        'https://api.spacexdata.com/v4/launches/past'
       )
       return data
     } catch (error) {
